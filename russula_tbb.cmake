@@ -25,6 +25,7 @@ set(cfg_options
     -DITK_LEGACY_REMOVE:BOOL=ON
     -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
     -DModule_CudaCommon:BOOL=ON
+    -DModule_CudaCommon_GIT_TAG:STRING=master
     -DModule_RTK:BOOL=ON
     -DModule_RTK_GIT_TAG:STRING=master
     -DBUILD_EXAMPLES:BOOL=OFF
