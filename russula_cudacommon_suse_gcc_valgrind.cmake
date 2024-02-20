@@ -1,5 +1,5 @@
 set(CTEST_SITE "russula.clb")
-set(ENV{ITK_DIR} "/home/srit/src/itk/lin64-RelWithDebInfo")
+set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-master-Static-RelWithDebInfo-FFTWON")
 set(ENV{CXXFLAGS} "-fPIC --param=max-vartrack-size=60000000")
 set(ENV{VALGRIND_LIB} "/usr/lib64/valgrind")
 set(CTEST_MEMORYCHECK_COMMAND /usr/bin/valgrind)

@@ -1,5 +1,5 @@
 set(CTEST_SITE "russula.clb")
-set(ENV{ITK_DIR} "/home/srit/src/itk/lin64-Debug")
+set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-master-Static-Debug-FFTWON")
 set(CTEST_BUILD_FLAGS -j16)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_GIT_COMMAND "git")
