@@ -9,9 +9,9 @@ set(CTEST_BUILD_FLAGS -j16)
 
 # Coverage
 SET(CTEST_COVERAGE_COMMAND "/usr/bin/gcov")
-SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} -g -O0 -fprofile-arcs -ftest-coverage -Wno-deprecated -Wno-unused-local-typedefs -Wall")
-SET(ENV{CFLAGS} "-g -O0 -fprofile-arcs -ftest-coverage -Wall")
-SET(ENV{LDFLAGS} "-fprofile-arcs -ftest-coverage")
+SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} --coverage -Wno-deprecated -Wno-unused-local-typedefs -Wall")
+SET(ENV{CFLAGS} "--coverage")
+SET(ENV{LDFLAGS} "--coverage")
 set(CTEST_CUSTOM_COVERAGE_EXCLUDE
     ${CTEST_CUSTOM_COVERAGE_EXCLUDE} # keep current exclude expressions
     "/cmake/"
