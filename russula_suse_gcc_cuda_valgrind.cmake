@@ -4,7 +4,7 @@ set(CTEST_BUILD_NAME "Linux-64bit-gcc-cuda-valgrind")
 set(CTEST_BUILD_CONFIGURATION RelWithDebInfo)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(dashboard_binary_name "RTK_lin64_gcc_cuda_system_itk4_valgrind")
-set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-master-Static-RelWithDebInfo-FFTWON")
+set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-main-Static-RelWithDebInfo-FFTWON")
 set(CTEST_BUILD_FLAGS -j16)
 set(ENV{CXXFLAGS} "-fPIC --param=max-vartrack-size=60000000")
 

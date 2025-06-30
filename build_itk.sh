@@ -26,7 +26,7 @@ then
 	git checkout v${1}.${2}
 	DIRNAME=itk${1}${2}${3}
 else
-	git checkout master
+	git checkout main
 	DIRNAME=itkHEAD
 fi
 

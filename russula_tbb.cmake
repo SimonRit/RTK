@@ -2,7 +2,7 @@ set(CTEST_SITE "russula.clb")
 set(CTEST_BUILD_FLAGS -j16)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_GIT_COMMAND "git")
-set(ITK_VERSION "master")
+set(ITK_VERSION "main")
 set(FFTW ON)
 set(DEBUG_RELEASE RelWithDebInfo)
 set(STATIC_SHARED Static)
@@ -25,9 +25,9 @@ set(cfg_options
     -DITK_LEGACY_REMOVE:BOOL=ON
     -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
     -DModule_CudaCommon:BOOL=ON
-    -DModule_CudaCommon_GIT_TAG:STRING=master
+    -DModule_CudaCommon_GIT_TAG:STRING=main
     -DModule_RTK:BOOL=ON
-    -DModule_RTK_GIT_TAG:STRING=master
+    -DModule_RTK_GIT_TAG:STRING=main
     -DBUILD_EXAMPLES:BOOL=OFF
     -DBUILD_TESTING:BOOL=ON
     -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS}

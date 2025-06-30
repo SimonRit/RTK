@@ -1,7 +1,7 @@
 set(CTEST_SITE "morille.clb")
 set(CTEST_GIT_COMMAND "C:\\Program Files\\Git\\bin\\git.exe")
 set(CTEST_CMAKE_GENERATOR "Ninja")
-foreach(ITK_VERSION "master")
+foreach(ITK_VERSION "main")
   foreach(FFTW ON)
     foreach(DEBUG_RELEASE RelWithDebInfo)
       set(ENV{PATH} "C:/src/fftw/build/${DEBUG_RELEASE};$ENV{PATH}")
@@ -30,9 +30,9 @@ foreach(ITK_VERSION "master")
             -DITK_LEGACY_REMOVE:BOOL=ON
             -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
             -DModule_CudaCommon:BOOL=ON
-            -DModule_CudaCommon_GIT_TAG:STRING=master
+            -DModule_CudaCommon_GIT_TAG:STRING=main
             -DModule_RTK:BOOL=ON
-            -DModule_RTK_GIT_TAG:STRING=master
+            -DModule_RTK_GIT_TAG:STRING=main
             -DBUILD_EXAMPLES:BOOL=OFF
             -DBUILD_TESTING:BOOL=ON
             -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS}

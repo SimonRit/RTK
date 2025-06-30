@@ -2,7 +2,7 @@ set(CTEST_SITE "OS-SR-466")
 set(CTEST_BUILD_FLAGS -j4)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_GIT_COMMAND "git")
-foreach(ITK_VERSION "master" "release")
+foreach(ITK_VERSION "main" "release")
   foreach(FFTW ON)
     foreach(DEBUG_RELEASE RelWithDebInfo)
       foreach(STATIC_SHARED Static Shared)
@@ -28,7 +28,7 @@ foreach(ITK_VERSION "master" "release")
             -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
             -DModule_CudaCommon:BOOL=ON
             -DModule_RTK:BOOL=ON
-            -DModule_RTK_GIT_TAG:STRING=master
+            -DModule_RTK_GIT_TAG:STRING=main
             -DBUILD_EXAMPLES:BOOL=OFF
             -DBUILD_TESTING:BOOL=ON
             -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS} 

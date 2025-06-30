@@ -3,7 +3,7 @@ set(CTEST_GIT_COMMAND "C:\\Program Files\\Git\\bin\\git.exe")
 set(MSVC_VERSION 16)
 set(MSVC_YEAR 2019)
 set(CTEST_CMAKE_GENERATOR "Visual Studio ${MSVC_VERSION} ${MSVC_YEAR}")
-set(ITK_VERSION "master")
+set(ITK_VERSION "main")
 set(FFTW ON)
 set(DEBUG_RELEASE RelWithDebInfo)
 set(STATIC_SHARED Static)
@@ -29,9 +29,9 @@ set(cfg_options
     -DITK_LEGACY_REMOVE:BOOL=ON
     -DITK_BUILD_DEFAULT_MODULES:BOOL=OFF
     -DModule_CudaCommon:BOOL=ON
-    -DModule_CudaCommon_GIT_TAG:STRING=master
+    -DModule_CudaCommon_GIT_TAG:STRING=main
     -DModule_RTK:BOOL=ON
-    -DModule_RTK_GIT_TAG:STRING=master
+    -DModule_RTK_GIT_TAG:STRING=main
     -DBUILD_EXAMPLES:BOOL=OFF
     -DBUILD_TESTING:BOOL=ON
     -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS}
