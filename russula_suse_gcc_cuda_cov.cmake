@@ -9,7 +9,7 @@ set(CTEST_BUILD_FLAGS -j16)
 
 # Coverage
 SET(CTEST_COVERAGE_COMMAND "/usr/bin/gcov")
-SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} --coverage -Wno-deprecated -Wno-unused-local-typedefs -Wall")
+SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} --coverage -Wall")
 SET(ENV{CFLAGS} "--coverage")
 SET(ENV{LDFLAGS} "--coverage")
 set(CTEST_CUSTOM_COVERAGE_EXCLUDE

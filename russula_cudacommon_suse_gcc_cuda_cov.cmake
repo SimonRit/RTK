@@ -9,7 +9,7 @@ set(CTEST_BINARY_DIRECTORY "/home/srit/src/rtk/dashboard_tests/CudaCommon_lin64_
 set(CTEST_BUILD_CONFIGURATION Debug)
 set(CTEST_CONFIGURATION_TYPE Debug)
 SET(CTEST_COVERAGE_COMMAND "/usr/bin/gcov")
-SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} --coverage -Wno-deprecated -Wno-unused-local-typedefs -Wall")
+SET(ENV{CXXFLAGS} "$ENV{CXXFLAGS} --coverage -Wall")
 SET(ENV{CFLAGS} "--coverage -Wall")
 SET(ENV{LDFLAGS} "--coverage")
 set(CTEST_EXTRA_COVERAGE_GLOB "/include/*.h" "/src/*.cxx" "/include/*.hxx")
