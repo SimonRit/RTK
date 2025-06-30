@@ -1,4 +1,4 @@
-set(CTEST_SITE "morille.clb")
+set(CTEST_SITE "russula.clb")
 set(CTEST_BUILD_FLAGS -j16)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_GIT_COMMAND "git")
