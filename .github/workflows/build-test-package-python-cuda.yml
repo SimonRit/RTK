@@ -4,8 +4,8 @@ on: [push,pull_request]
 
 env:
   itk-wheel-tag: 'v5.4.4'
-  itk-python-package-tag: 'release-5.4'
-  itk-python-package-org: 'InsightSoftwareConsortium'
+  itk-python-package-tag: '48bb670e07dfef706320f100d2b7b7af27488418'
+  itk-python-package-org: 'SimonRit'
   itk-module-deps: "SimonRit/ITKCudaCommon@cuda-array-interface"
 
 concurrency:
