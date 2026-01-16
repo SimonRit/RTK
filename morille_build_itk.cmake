@@ -14,6 +14,7 @@ foreach(ITK_VERSION main release)
           set(BUILD_SHARED_LIBS ON)
         endif()
 
+        set(CTEST_BUILD_NAME "ITK-${MSVC_YEAR}-${ITK_VERSION}-${STATIC_SHARED}-${DEBUG_RELEASE}-FFTW${FFTW}")
         set(CTEST_BINARY_DIRECTORY "C:\\src\\itk\\${MSVC_YEAR}-${ITK_VERSION}-${STATIC_SHARED}-${DEBUG_RELEASE}-FFTW${FFTW}")
         set(CTEST_BUILD_CONFIGURATION ${DEBUG_RELEASE})
         set(CTEST_CONFIGURATION_TYPE ${DEBUG_RELEASE})
@@ -24,7 +25,7 @@ foreach(ITK_VERSION main release)
         ctest_update()
 
         set(cfg_options
-           -DITK_FUTURE_LEGACY=ON
+           -DITK_FUTURE_LEGACY_REMOVE=ON
            -DITK_LEGACY_REMOVE=ON
            -DBUILD_EXAMPLES=OFF
            -DBUILD_TESTING=OFF
@@ -42,6 +43,16 @@ foreach(ITK_VERSION main release)
           )
         ctest_configure(OPTIONS "${cfg_options}")
         ctest_build()
+
+        # Use RTK parameters for submission
+        set(CTEST_PROJECT_NAME "RTK")
+        set(CTEST_NIGHTLY_START_TIME "1:00:00 UTC")
+
+        set(CTEST_DROP_METHOD "http")
+        set(CTEST_DROP_SITE "my.cdash.org")
+        set(CTEST_DROP_LOCATION "/submit.php?project=RTK")
+        set(CTEST_DROP_SITE_CDASH TRUE)
+        ctest_submit()
       endforeach()
     endforeach()
   endforeach()
