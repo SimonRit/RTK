@@ -1,5 +1,5 @@
 # client maintainer: simon.rit@creatis.insa-lyon.fr
-set(CTEST_SITE "russula.clb")
+set(CTEST_SITE "agaric.clb")
 set(CTEST_BUILD_NAME "Linux-64bit-Style")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_UPDATE_COMMAND "git")
@@ -8,7 +8,7 @@ get_filename_component(CTEST_DASHBOARD_ROOT "${CTEST_SCRIPT_DIRECTORY}/../${dash
 set(CTEST_SOURCE_DIRECTORY ${CTEST_DASHBOARD_ROOT}/RTK)
 set(CTEST_BINARY_DIRECTORY ${CTEST_DASHBOARD_ROOT}/RTK-Style)
 set(CTEST_NOTES_FILES "${CTEST_SCRIPT_DIRECTORY}/${CTEST_SCRIPT_NAME}")
-set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-main-Static-Release-FFTWON")
+set(ENV{ITK_DIR} "/export/home/rtk/dashboard_tests/ITK-main-Static-Release-FFTWON")
 
 set(CTEST_TEST_TIMEOUT "60")
 ctest_empty_binary_directory(${CTEST_BINARY_DIRECTORY})
@@ -17,7 +17,7 @@ ctest_start(Nightly)
 #ctest_start(Experimental)
 ctest_update()
 
-set(KWSTYLE "/home/srit/src/kwstyle/lin64/bin/KWStyle")
+set(KWSTYLE "/export/home/kwstyle/lin64/bin/KWStyle")
 
 file(WRITE ${CTEST_BINARY_DIRECTORY}/CMakeCache.txt "
 SITE:STRING=${CTEST_SITE}

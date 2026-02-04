@@ -1,10 +1,10 @@
 # client maintainer: simon.rit@creatis.insa-lyon.fr
-set(CTEST_SITE "russula.clb")
+set(CTEST_SITE "agaric.clb")
 set(CTEST_BUILD_NAME "Linux-64bit-gcc-cuda-cov")
 set(CTEST_BUILD_CONFIGURATION Debug)
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(dashboard_binary_name "RTK_lin64_gcc_cuda_system_itk4_cov")
-set(ENV{ITK_DIR} "/home/srit/src/rtk/dashboard_tests/ITK-main-Static-Debug-FFTWON")
+set(ENV{ITK_DIR} "/export/home/rtk/dashboard_tests/ITK-main-Static-Debug-FFTWON")
 set(CTEST_BUILD_FLAGS -j16)
 
 # Coverage
