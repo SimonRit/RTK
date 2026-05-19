@@ -4,6 +4,7 @@ export PATH=/home/srit/Downloads/cuda124/bin:$PATH
 export LD_LIBRARY_PATH=/home/srit/Downloads/cuda116/targets/x86_64-linux/lib:$LD_LIBRARY_PATH
 export PATH=/home/srit/Downloads/cmake-3.29.0-linux-x86_64/bin:$PATH
 export LD_LIBRARY_PATH=/home/srit/Downloads/cmake-3.29.0-linux-x86_64/bin:$LD_LIBRARY_PATH
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=16
 
 ctest -S /home/srit/src/rtk/rtk-dashboard/agaric_build_itk.cmake
 
