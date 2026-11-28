@@ -1,7 +1,7 @@
 set(CTEST_SITE "morille.clb")
 set(CTEST_GIT_COMMAND "C:\\Program Files\\Git\\bin\\git.exe")
 set(CTEST_CMAKE_GENERATOR "Ninja")
-foreach(ITK_VERSION "main")
+foreach(ITK_VERSION "main" "release-5.4")
   foreach(FFTW ON)
     foreach(DEBUG_RELEASE RelWithDebInfo)
       set(ENV{PATH} "C:/src/fftw/build/${DEBUG_RELEASE};$ENV{PATH}")
@@ -15,7 +15,7 @@ foreach(ITK_VERSION "main")
         file(REMOVE_RECURSE "${CTEST_SOURCE_DIRECTORY}\\Modules\\Remote\\CudaCommon")
         file(REMOVE_RECURSE "${CTEST_SOURCE_DIRECTORY}\\Modules\\Remote\\RTK")
 
-        set(CTEST_BINARY_DIRECTORY "C:\\RTK-Ninja-${STATIC_SHARED}-${FFTW}")
+        set(CTEST_BINARY_DIRECTORY "C:\\RTK-Ninja-ITK${ITK_VERSION}-${STATIC_SHARED}-${FFTW}")
         set(CTEST_BUILD_CONFIGURATION ${DEBUG_RELEASE})
         set(CTEST_CONFIGURATION_TYPE ${DEBUG_RELEASE})
 
